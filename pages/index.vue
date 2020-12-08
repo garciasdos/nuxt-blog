@@ -22,8 +22,6 @@
     </section>
   <section class="section">
     <div class="container">
-        <h1 class="title"></h1>
-        <h2 class="subtitle">{{ content.description }}</h2>
         <nuxt-content :document="content"/>
     </div>
   </section>
