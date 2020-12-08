@@ -18,9 +18,7 @@ export default {
     ]
   },
 
-  // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [
-  ],
+  css: [{ src: '~/assets/scss/style.scss', lang: 'scss' }],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
@@ -31,23 +29,28 @@ export default {
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
+    '@nuxtjs/style-resources',
   ],
+
+  styleResources: {
+    // your settings here
+    scss: ['./assets/scss/*.scss',]
+  },
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     // https://go.nuxtjs.dev/bootstrap
-    '@nuxtjs/bulma',
     '@nuxt/content'
   ],
 
-  // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {
-    postcss: {
-      preset: {
-        features: {
-          customProperties: false
-        }
-      }
-    },
-  }
+  // // Build Configuration (https://go.nuxtjs.dev/config-build)
+  // build: {
+  //   postcss: {
+  //     preset: {
+  //       features: {
+  //         customProperties: false
+  //       }
+  //     }
+  //   },
+  // }
 }

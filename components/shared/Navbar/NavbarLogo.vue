@@ -1,5 +1,5 @@
 <template>
-  <img :src="require('@/static/icon.png')" />
+  <img :src="require('static/icon.png')" />
 </template>
 
 <script>
